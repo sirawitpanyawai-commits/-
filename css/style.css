@@ -1,0 +1,336 @@
+@font-face {
+  font-family: 'Roboto-Var';
+  src: url('Roboto-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "Bangna New", sans-serif;
+  background-color: #fff;
+  color: #000;
+  font-size: 35px;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 100;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+
+}
+
+.logo span {
+  font-weight: bold;
+  color: #000;
+
+
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  left: 25px;
+}
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+.city {
+  font-size: 18px;
+}
+.logo {
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+}
+
+
+
+/* เมนูใต้โลโก้ */
+.sub-menu {
+  margin-top: 100px; 
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.sub-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.sub-menu li {
+  position: relative;
+}
+.sub-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px; 
+  padding-bottom: 8px;
+}
+.sub-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+.sub-menu a:hover::after,
+.sub-menu li.active a::after {
+  width: 100%;
+}
+.sub-menu li.active a {
+  font-weight: 600;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+  transition: left 0.4s ease;
+  z-index: 200;
+}
+.sidebar.active {
+  left: 0;
+}
+.close-btn {
+  text-align: right;
+  padding: 25px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.menu-list {
+  list-style: none;
+  padding: 0 25px;
+}
+.menu-list li {
+  border-bottom: 1px solid #eee;
+}
+.menu-list li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  padding: 20px 0;
+}
+.menu-list li a:hover {
+  color: #666;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 150;
+}
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.content h4 {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.htl h1 {
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.lth h1 {
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+}
+
+.content {
+  margin: -150px auto;
+  padding: 140px 100px 200px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  width: 350px;
+  height: auto;
+  border-radius: 100px;
+}
+
+/* เพิ่มกรอบและเงาให้แต่ละภาค */
+.section-container {
+  margin-bottom: 60px;
+  margin-top: 40px;
+  text-align: center;
+  padding: 40px 30px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fafafa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* สลับรูปและข้อความข้ามภาค */
+.section-container:nth-child(even) .section-row {
+  flex-direction: row-reverse;
+}
+
+.section-title {
+  font-size: 40px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  margin: 50px;
+}
+
+.section-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 0 50px;
+}
+
+.section-image {
+  flex: 0 0 45%;
+  max-width: 45%; 
+  text-align: center;
+}
+
+.section-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-text {
+  flex: 0 0 45%;
+  max-width: 45%; 
+  text-align: left;
+}
+
+.section-text h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 20;
+}
+
+.image-fut, .nahe, .image-ook, .ook, .image-kang, .kang, .image-esan, .esan, .image-tay, .tay {
+  margin: 0;
+  padding: 0;
+}
+.image-fut img, .image-ook img, .image-kang img, .image-esan img, .image-tay img {
+  margin: auto;
+}
+.nahe h1, .ook h1, .kang h1, .esan h1, .tay h1 {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    padding: 120px 20px 200px; 
+  }
+
+  .section-container {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .section-row,
+  .section-container:nth-child(even) .section-row {
+    flex-direction: column;
+    padding: 0; 
+    gap: 20px;
+  }
+
+  .section-image,
+  .section-text {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-image img {
+    max-width: 400px;
+    box-shadow: none; 
+  }
+
+  .section-text h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .htl h1 {
+    text-align: left;
+    font-size: 18px;
+  }
+}

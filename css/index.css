@@ -1,0 +1,53 @@
+body {
+  font-family: "Bangna New", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFB74D;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #FF7043;
+  font-family: "Bangna New", sans-serif;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+.logo {
+  width: 300px;        /* กำหนดขนาดกรอบ */
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;    /* กันรูปหลุดกรอบ */
+  border-radius: 10px; /* ถ้าต้องการให้โค้ง */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* ทำให้รูปพอดีกรอบแบบสวยสุด */
+}
+
